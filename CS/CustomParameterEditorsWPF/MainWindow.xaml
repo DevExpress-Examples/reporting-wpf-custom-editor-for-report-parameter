@@ -1,0 +1,34 @@
+﻿<Window x:Class="CustomParameterEditorsWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="614.823" Width="881.959"
+        xmlns:mvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+        xmlns:dxp="http://schemas.devexpress.com/winfx/2008/xaml/printing"  
+        xmlns:dxpp="clr-namespace:DevExpress.Xpf.Printing.Parameters;assembly=DevExpress.Xpf.Printing.v14.2"     
+        xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" 
+        xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" 
+        xmlns:local="clr-namespace:CustomParameterEditorsWPF"
+        DataContext="{mvvm:ViewModelSource local:ViewModel}">
+
+    <Window.Resources>
+        <local:CustomParameterTemplateSelector x:Key="parameterTemplateSelector">
+            <local:CustomParameterTemplateSelector.Templates>
+                <DataTemplate x:Key="catNames">
+                    <dxpp:ParameterLineLayout>
+                        <dxe:ComboBoxEdit Grid.Column="1" IsTextEditable="False" InvalidValueBehavior="AllowLeaveEditor"
+                                          ItemsSource="{Binding DataContext.Categories, RelativeSource={RelativeSource AncestorType=Window}}" EditValue="{Binding Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}">
+                            <dxe:ComboBoxEdit.StyleSettings>
+                                <dxe:CheckedComboBoxStyleSettings/>
+                            </dxe:ComboBoxEdit.StyleSettings>
+                        </dxe:ComboBoxEdit>
+                    </dxpp:ParameterLineLayout>
+                </DataTemplate>
+            </local:CustomParameterTemplateSelector.Templates>
+        </local:CustomParameterTemplateSelector>
+        <Style TargetType="dxpp:ParametersPanel">
+            <Setter Property="ParameterTemplateSelector" Value="{StaticResource parameterTemplateSelector}" />
+        </Style>
+    </Window.Resources>
+
+    <dxp:DocumentViewer Model="{Binding Model}" Name="preview" />
+</Window>
