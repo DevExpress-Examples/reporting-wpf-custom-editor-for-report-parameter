@@ -1,0 +1,37 @@
+﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+        xmlns:dxp="http://schemas.devexpress.com/winfx/2008/xaml/printing"  
+        xmlns:dxpp="clr-namespace:DevExpress.Xpf.Printing.Parameters;assembly=DevExpress.Xpf.Printing.v15.2"     
+        xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" 
+        xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" 
+        xmlns:local="clr-namespace:CustomParameterEditorsWPF"
+        xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars" xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="CustomParameterEditorsWPF.MainWindow"
+        Title="MainWindow" Height="720" Width="1280">
+
+    <Window.Resources>
+        <local:CustomParameterTemplateSelector x:Key="parameterTemplateSelector">
+            <local:CustomParameterTemplateSelector.Templates>
+                <DataTemplate x:Key="multiValueTemplate">
+                    <dxpp:ParameterLineLayout>
+                        <dxe:ComboBoxEdit Grid.Column="1" MinWidth="70" ShowCustomItems="True"
+                			IncrementalFiltering="False" AutoComplete="True" ImmediatePopup="True"
+                			ItemsSource="{Binding LookUpValues}" DisplayMember="RealDescription" ValueMember="Value" MaxHeight="90" FocusPopupOnOpen="False">
+                            <mvvm:Interaction.Behaviors>
+                                <dxpp:MutliValueBindingProvider SourceType="{Binding Type}" />
+                                <dxpp:ShowPopupBehavior />
+                            </mvvm:Interaction.Behaviors>
+                            <dxe:ComboBoxEdit.StyleSettings>
+                                <dxe:CheckedTokenComboBoxStyleSettings AllowEditTokens="False" EnableTokenWrapping="True" ShowTokenButtons="True" NewTokenPosition="Far" />
+                            </dxe:ComboBoxEdit.StyleSettings>
+                        </dxe:ComboBoxEdit>
+                    </dxpp:ParameterLineLayout>
+                </DataTemplate>
+            </local:CustomParameterTemplateSelector.Templates>
+        </local:CustomParameterTemplateSelector>
+        <Style TargetType="{x:Type dxpp:ParametersPanel}">
+            <Setter Property="ParameterTemplateSelector" Value="{StaticResource parameterTemplateSelector}" />
+        </Style>
+    </Window.Resources>
+    <dxp:DocumentPreviewControl x:Name="preview" />
+</Window>
