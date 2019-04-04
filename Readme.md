@@ -2,7 +2,7 @@
 *Files to look at*:
 
 * [MainWindow.xaml](./CS/CustomParameterEditorsWPF/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/CustomParameterEditorsWPF/MainWindow.xaml))
-* [MainWindow.xaml.cs](./CS/CustomParameterEditorsWPF/MainWindow.xaml.cs) (VB: [MainWindow.xaml](./VB/CustomParameterEditorsWPF/MainWindow.xaml))
+* [MainWindow.xaml.cs](./CS/CustomParameterEditorsWPF/MainWindow.xaml.cs) (VB: [MainWindow.xaml.vb](./VB/CustomParameterEditorsWPF/MainWindow.xaml.vb))
 * [XtraReport1.cs](./CS/CustomParameterEditorsWPF/Reports/XtraReport1.cs) (VB: [XtraReport1.vb](./VB/CustomParameterEditorsWPF/Reports/XtraReport1.vb))
 <!-- default file list end -->
 # How to provide custom editors for report parameters in WPF
