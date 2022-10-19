@@ -1,43 +1,41 @@
-﻿Imports System.Collections.Generic
+Imports System.Collections.Generic
 Imports CustomParameterEditorsWPF.Reports
 Imports DevExpress.Mvvm.DataAnnotations
 Imports DevExpress.Xpf.Printing
-' ...
 
+' ...
 Namespace CustomParameterEditorsWPF
-    <POCOViewModel> _
+
+    <POCOViewModel>
     Public Class ViewModel
 
-        Private model_Renamed As XtraReportPreviewModel
-        Public Overridable Property Categories() As Categories
+        Private modelField As XtraReportPreviewModel
 
-        Public ReadOnly Property Model() As XtraReportPreviewModel
+        Public Overridable Property Categories As Categories
+
+        Public ReadOnly Property Model As XtraReportPreviewModel
             Get
-                If model_Renamed IsNot Nothing Then
-                    Return model_Renamed
-                Else
-                    model_Renamed = CreateReportModel()
-                    Return model_Renamed
-                End If
+                Return If(modelField, Function()
+                    modelField = CreateReportModel()
+                    Return modelField
+                End Function())
             End Get
         End Property
 
         Private Function CreateReportModel() As XtraReportPreviewModel
-
-            Dim model_Renamed = New XtraReportPreviewModel()
+            Dim model = New XtraReportPreviewModel()
             Dim report = New XtraReport1()
-            model_Renamed.Report = report
+            model.Report = report
             Categories = New Categories()
-            AddHandler model_Renamed.ParametersModel.Validate, AddressOf ParametersModel_Validate
+            AddHandler model.ParametersModel.Validate, AddressOf ParametersModel_Validate
             report.CreateDocument()
-            Return model_Renamed
+            Return model
         End Function
 
-        Private Sub ParametersModel_Validate(ByVal sender As Object, ByVal e As DevExpress.Xpf.Printing.Parameters.Models.ValidateParameterEventArgs)
-            If e.ParameterModel.Name = "catNames" Then
-
-                Dim categories_Renamed As IList(Of Object) = DirectCast(e.ParameterModel.Value, IList(Of Object))
-                If categories_Renamed.Count = 0 Then
+        Private Sub ParametersModel_Validate(ByVal sender As Object, ByVal e As Parameters.Models.ValidateParameterEventArgs)
+            If Equals(e.ParameterModel.Name, "catNames") Then
+                Dim categories As IList(Of Object) = CType(e.ParameterModel.Value, IList(Of Object))
+                If categories.Count = 0 Then
                     e.Error = "No categories selected"
                 End If
             End If

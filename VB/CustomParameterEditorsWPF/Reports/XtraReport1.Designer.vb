@@ -1,5 +1,7 @@
-﻿Namespace CustomParameterEditorsWPF.Reports
-    Partial Public Class XtraReport1
+Namespace CustomParameterEditorsWPF.Reports
+
+    Partial Class XtraReport1
+
         ''' <summary>
         ''' Required designer variable.
         ''' </summary>
@@ -10,14 +12,14 @@
         ''' </summary>
         ''' <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
-            If disposing AndAlso (components IsNot Nothing) Then
-                components.Dispose()
+            If disposing AndAlso (Me.components IsNot Nothing) Then
+                Me.components.Dispose()
             End If
+
             MyBase.Dispose(disposing)
         End Sub
 
-        #Region "Designer generated code"
-
+'#Region "Designer generated code"
         ''' <summary>
         ''' Required method for Designer support - do not modify
         ''' the contents of this method with the code editor.
@@ -50,14 +52,14 @@
             Me.catNames = New DevExpress.XtraReports.Parameters.Parameter()
             Me.xrPanel1 = New DevExpress.XtraReports.UI.XRPanel()
             Me.xrControlStyle1 = New DevExpress.XtraReports.UI.XRControlStyle()
-            DirectCast(Me.nwindDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.xrTable1, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.xrTable2, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.nwindDataSet1), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.xrTable1), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.xrTable2), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me), System.ComponentModel.ISupportInitialize).BeginInit()
             ' 
             ' Detail
             ' 
-            Me.Detail.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() { Me.xrPanel1})
+            Me.Detail.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.xrPanel1})
             Me.Detail.HeightF = 104.1667F
             Me.Detail.Name = "Detail"
             Me.Detail.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F)
@@ -88,7 +90,7 @@
             ' 
             ' DetailReport
             ' 
-            Me.DetailReport.Bands.AddRange(New DevExpress.XtraReports.UI.Band() { Me.Detail1, Me.ReportHeader})
+            Me.DetailReport.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.Detail1, Me.ReportHeader})
             Me.DetailReport.DataAdapter = Me.productsTableAdapter
             Me.DetailReport.DataMember = "Categories.CategoriesProducts"
             Me.DetailReport.DataSource = Me.nwindDataSet1
@@ -101,13 +103,13 @@
             ' 
             ' Detail1
             ' 
-            Me.Detail1.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() { Me.xrTable2})
+            Me.Detail1.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.xrTable2})
             Me.Detail1.HeightF = 25F
             Me.Detail1.Name = "Detail1"
             ' 
             ' ReportHeader
             ' 
-            Me.ReportHeader.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() { Me.xrTable1})
+            Me.ReportHeader.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.xrTable1})
             Me.ReportHeader.HeightF = 25F
             Me.ReportHeader.Name = "ReportHeader"
             ' 
@@ -115,11 +117,11 @@
             ' 
             Me.xrTable1.BackColor = System.Drawing.Color.Gainsboro
             Me.xrTable1.BorderColor = System.Drawing.Color.LightGray
-            Me.xrTable1.Borders = (CType((((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) Or DevExpress.XtraPrinting.BorderSide.Right) Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide))
-            Me.xrTable1.Font = New System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, (CByte(204)))
+            Me.xrTable1.Borders = CType(((((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) Or DevExpress.XtraPrinting.BorderSide.Right) Or DevExpress.XtraPrinting.BorderSide.Bottom)), DevExpress.XtraPrinting.BorderSide)
+            Me.xrTable1.Font = New System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, (CByte((204))))
             Me.xrTable1.LocationFloat = New DevExpress.Utils.PointFloat(17F, 0F)
             Me.xrTable1.Name = "xrTable1"
-            Me.xrTable1.Rows.AddRange(New DevExpress.XtraReports.UI.XRTableRow() { Me.xrTableRow1})
+            Me.xrTable1.Rows.AddRange(New DevExpress.XtraReports.UI.XRTableRow() {Me.xrTableRow1})
             Me.xrTable1.SizeF = New System.Drawing.SizeF(717.4999F, 25F)
             Me.xrTable1.StylePriority.UseBackColor = False
             Me.xrTable1.StylePriority.UseBorderColor = False
@@ -128,7 +130,7 @@
             ' 
             ' xrTableRow1
             ' 
-            Me.xrTableRow1.Cells.AddRange(New DevExpress.XtraReports.UI.XRTableCell() { Me.xrTableCell1, Me.xrTableCell2, Me.xrTableCell3, Me.xrTableCell7})
+            Me.xrTableRow1.Cells.AddRange(New DevExpress.XtraReports.UI.XRTableCell() {Me.xrTableCell1, Me.xrTableCell2, Me.xrTableCell3, Me.xrTableCell7})
             Me.xrTableRow1.Name = "xrTableRow1"
             Me.xrTableRow1.Weight = 1R
             ' 
@@ -168,14 +170,14 @@
             ' 
             Me.xrTable2.BookmarkParent = Me.xrPanel1
             Me.xrTable2.BorderColor = System.Drawing.Color.LightGray
-            Me.xrTable2.Borders = (CType(((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Right) Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide))
-            Me.xrTable2.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() { New DevExpress.XtraReports.UI.XRBinding("Bookmark", Nothing, "Categories.CategoriesProducts.ProductName")})
+            Me.xrTable2.Borders = CType((((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Right) Or DevExpress.XtraPrinting.BorderSide.Bottom)), DevExpress.XtraPrinting.BorderSide)
+            Me.xrTable2.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Bookmark", Nothing, "Categories.CategoriesProducts.ProductName")})
             Me.xrTable2.EvenStyleName = "xrControlStyle1"
-            Me.xrTable2.Font = New System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, (CByte(204)))
+            Me.xrTable2.Font = New System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, (CByte((204))))
             Me.xrTable2.LocationFloat = New DevExpress.Utils.PointFloat(17F, 0F)
             Me.xrTable2.Name = "xrTable2"
             Me.xrTable2.Padding = New DevExpress.XtraPrinting.PaddingInfo(4, 4, 4, 4, 100F)
-            Me.xrTable2.Rows.AddRange(New DevExpress.XtraReports.UI.XRTableRow() { Me.xrTableRow2})
+            Me.xrTable2.Rows.AddRange(New DevExpress.XtraReports.UI.XRTableRow() {Me.xrTableRow2})
             Me.xrTable2.SizeF = New System.Drawing.SizeF(717.4999F, 25F)
             Me.xrTable2.StylePriority.UseBorderColor = False
             Me.xrTable2.StylePriority.UseBorders = False
@@ -186,13 +188,13 @@
             ' 
             ' xrTableRow2
             ' 
-            Me.xrTableRow2.Cells.AddRange(New DevExpress.XtraReports.UI.XRTableCell() { Me.xrTableCell4, Me.xrTableCell5, Me.xrTableCell6, Me.xrTableCell8})
+            Me.xrTableRow2.Cells.AddRange(New DevExpress.XtraReports.UI.XRTableCell() {Me.xrTableCell4, Me.xrTableCell5, Me.xrTableCell6, Me.xrTableCell8})
             Me.xrTableRow2.Name = "xrTableRow2"
             Me.xrTableRow2.Weight = 1R
             ' 
             ' xrTableCell4
             ' 
-            Me.xrTableCell4.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() { New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "Categories.CategoriesProducts.ProductName")})
+            Me.xrTableCell4.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "Categories.CategoriesProducts.ProductName")})
             Me.xrTableCell4.Name = "xrTableCell4"
             Me.xrTableCell4.StylePriority.UseTextAlignment = False
             Me.xrTableCell4.Text = "xrTableCell4"
@@ -201,7 +203,7 @@
             ' 
             ' xrTableCell5
             ' 
-            Me.xrTableCell5.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() { New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "Categories.CategoriesProducts.QuantityPerUnit")})
+            Me.xrTableCell5.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "Categories.CategoriesProducts.QuantityPerUnit")})
             Me.xrTableCell5.Name = "xrTableCell5"
             Me.xrTableCell5.StylePriority.UseTextAlignment = False
             Me.xrTableCell5.Text = "xrTableCell5"
@@ -210,7 +212,7 @@
             ' 
             ' xrTableCell6
             ' 
-            Me.xrTableCell6.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() { New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "Categories.CategoriesProducts.UnitPrice", "{0:$0.00}")})
+            Me.xrTableCell6.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "Categories.CategoriesProducts.UnitPrice", "{0:$0.00}")})
             Me.xrTableCell6.Name = "xrTableCell6"
             Me.xrTableCell6.StylePriority.UseTextAlignment = False
             Me.xrTableCell6.Text = "xrTableCell6"
@@ -219,7 +221,7 @@
             ' 
             ' xrTableCell8
             ' 
-            Me.xrTableCell8.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() { New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "Categories.CategoriesProducts.UnitsInStock")})
+            Me.xrTableCell8.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "Categories.CategoriesProducts.UnitsInStock")})
             Me.xrTableCell8.Name = "xrTableCell8"
             Me.xrTableCell8.StylePriority.UseTextAlignment = False
             Me.xrTableCell8.Text = "xrTableCell8"
@@ -228,9 +230,9 @@
             ' 
             ' xrLabel1
             ' 
-            Me.xrLabel1.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() { New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "Categories.CategoryName")})
-            Me.xrLabel1.Font = New System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, (CByte(204)))
-            Me.xrLabel1.ForeColor = System.Drawing.Color.FromArgb((CInt((CByte(0)))), (CInt((CByte(128)))), (CInt((CByte(192)))))
+            Me.xrLabel1.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "Categories.CategoryName")})
+            Me.xrLabel1.Font = New System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, (CByte((204))))
+            Me.xrLabel1.ForeColor = System.Drawing.Color.FromArgb((CInt(((CByte((0)))))), (CInt(((CByte((128)))))), (CInt(((CByte((192)))))))
             Me.xrLabel1.LocationFloat = New DevExpress.Utils.PointFloat(0.006993612F, 10.00001F)
             Me.xrLabel1.Name = "xrLabel1"
             Me.xrLabel1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F)
@@ -243,8 +245,8 @@
             ' 
             ' xrLabel2
             ' 
-            Me.xrLabel2.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() { New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "Categories.Description")})
-            Me.xrLabel2.Font = New System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, (CByte(204)))
+            Me.xrLabel2.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "Categories.Description")})
+            Me.xrLabel2.Font = New System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, (CByte((204))))
             Me.xrLabel2.ForeColor = System.Drawing.Color.DimGray
             Me.xrLabel2.LocationFloat = New DevExpress.Utils.PointFloat(0.006993612F, 50.62502F)
             Me.xrLabel2.Name = "xrLabel2"
@@ -258,7 +260,7 @@
             ' 
             ' xrPictureBox1
             ' 
-            Me.xrPictureBox1.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() { New DevExpress.XtraReports.UI.XRBinding("Image", Nothing, "Categories.Picture")})
+            Me.xrPictureBox1.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Image", Nothing, "Categories.Picture")})
             Me.xrPictureBox1.LocationFloat = New DevExpress.Utils.PointFloat(551.8818F, 10.00001F)
             Me.xrPictureBox1.Name = "xrPictureBox1"
             Me.xrPictureBox1.SizeF = New System.Drawing.SizeF(165.625F, 79.99998F)
@@ -271,8 +273,8 @@
             ' 
             ' xrPanel1
             ' 
-            Me.xrPanel1.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() { Me.xrPictureBox1, Me.xrLabel2, Me.xrLabel1})
-            Me.xrPanel1.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() { New DevExpress.XtraReports.UI.XRBinding("Bookmark", Nothing, "Categories.CategoryName")})
+            Me.xrPanel1.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.xrPictureBox1, Me.xrLabel2, Me.xrLabel1})
+            Me.xrPanel1.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Bookmark", Nothing, "Categories.CategoryName")})
             Me.xrPanel1.LocationFloat = New DevExpress.Utils.PointFloat(17.00001F, 10.00001F)
             Me.xrPanel1.Name = "xrPanel1"
             Me.xrPanel1.SizeF = New System.Drawing.SizeF(721F, 94.16666F)
@@ -285,51 +287,76 @@
             ' 
             ' XtraReport1
             ' 
-            Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() { Me.Detail, Me.TopMargin, Me.BottomMargin, Me.DetailReport})
+            Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.Detail, Me.TopMargin, Me.BottomMargin, Me.DetailReport})
             Me.Bookmark = "Product Categories Report"
             Me.DataAdapter = Me.categoriesTableAdapter
             Me.DataMember = "Categories"
             Me.DataSource = Me.nwindDataSet1
             Me.Margins = New System.Drawing.Printing.Margins(49, 53, 48, 48)
-            Me.Parameters.AddRange(New DevExpress.XtraReports.Parameters.Parameter() { Me.catNames})
+            Me.Parameters.AddRange(New DevExpress.XtraReports.Parameters.Parameter() {Me.catNames})
             Me.RequestParameters = False
-            Me.StyleSheet.AddRange(New DevExpress.XtraReports.UI.XRControlStyle() { Me.xrControlStyle1})
+            Me.StyleSheet.AddRange(New DevExpress.XtraReports.UI.XRControlStyle() {Me.xrControlStyle1})
             Me.Version = "11.1"
-            DirectCast(Me.nwindDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.xrTable1, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.xrTable2, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me, System.ComponentModel.ISupportInitialize).EndInit()
-
+            AddHandler Me.BeforePrint, New System.Drawing.Printing.PrintEventHandler(AddressOf Me.XtraReport1_BeforePrint)
+            CType((Me.nwindDataSet1), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.xrTable1), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.xrTable2), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me), System.ComponentModel.ISupportInitialize).EndInit()
         End Sub
 
-        #End Region
-
+'#End Region
         Private Detail As DevExpress.XtraReports.UI.DetailBand
+
         Private TopMargin As DevExpress.XtraReports.UI.TopMarginBand
+
         Private BottomMargin As DevExpress.XtraReports.UI.BottomMarginBand
-        Private nwindDataSet1 As App_data.nwindDataSet
-        Private categoriesTableAdapter As App_data.nwindDataSetTableAdapters.CategoriesTableAdapter
+
+        Private nwindDataSet1 As CustomParameterEditorsWPF.App_data.nwindDataSet
+
+        Private categoriesTableAdapter As CustomParameterEditorsWPF.App_data.nwindDataSetTableAdapters.CategoriesTableAdapter
+
         Private DetailReport As DevExpress.XtraReports.UI.DetailReportBand
+
         Private Detail1 As DevExpress.XtraReports.UI.DetailBand
+
         Private xrTable2 As DevExpress.XtraReports.UI.XRTable
+
         Private xrTableRow2 As DevExpress.XtraReports.UI.XRTableRow
+
         Private xrTableCell4 As DevExpress.XtraReports.UI.XRTableCell
+
         Private xrTableCell5 As DevExpress.XtraReports.UI.XRTableCell
+
         Private xrTableCell6 As DevExpress.XtraReports.UI.XRTableCell
+
         Private xrTableCell8 As DevExpress.XtraReports.UI.XRTableCell
+
         Private ReportHeader As DevExpress.XtraReports.UI.ReportHeaderBand
+
         Private xrTable1 As DevExpress.XtraReports.UI.XRTable
+
         Private xrTableRow1 As DevExpress.XtraReports.UI.XRTableRow
+
         Private xrTableCell1 As DevExpress.XtraReports.UI.XRTableCell
+
         Private xrTableCell2 As DevExpress.XtraReports.UI.XRTableCell
+
         Private xrTableCell3 As DevExpress.XtraReports.UI.XRTableCell
+
         Private xrTableCell7 As DevExpress.XtraReports.UI.XRTableCell
-        Private productsTableAdapter As App_data.nwindDataSetTableAdapters.ProductsTableAdapter
+
+        Private productsTableAdapter As CustomParameterEditorsWPF.App_data.nwindDataSetTableAdapters.ProductsTableAdapter
+
         Private xrPictureBox1 As DevExpress.XtraReports.UI.XRPictureBox
+
         Private xrLabel2 As DevExpress.XtraReports.UI.XRLabel
+
         Private xrLabel1 As DevExpress.XtraReports.UI.XRLabel
+
         Private catNames As DevExpress.XtraReports.Parameters.Parameter
+
         Private xrPanel1 As DevExpress.XtraReports.UI.XRPanel
+
         Private xrControlStyle1 As DevExpress.XtraReports.UI.XRControlStyle
     End Class
 End Namespace
