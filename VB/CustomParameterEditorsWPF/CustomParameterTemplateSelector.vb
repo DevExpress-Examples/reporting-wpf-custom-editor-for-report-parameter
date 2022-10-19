@@ -6,7 +6,7 @@ Imports System.Windows
 Imports System.Windows.Controls
 Imports DevExpress.Xpf.Printing.Parameters
 Imports DevExpress.Xpf.Printing.Parameters.Models
-
+Imports DevExpress.XtraReports.Parameters.ViewModels
 
 Namespace CustomParameterEditorsWPF
     Public Class CustomParameterTemplateSelector
@@ -21,7 +21,7 @@ Namespace CustomParameterEditorsWPF
         End Property
 
         Public Overrides Function SelectTemplate(ByVal item As Object, ByVal container As DependencyObject) As DataTemplate
-            Dim parameter = TryCast(item, ParameterModel)
+            Dim parameter = TryCast(item, ParameterItemViewModel)
             If parameter Is Nothing Then
                 Return Nothing
             End If

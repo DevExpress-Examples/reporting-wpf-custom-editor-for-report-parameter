@@ -1,20 +1,19 @@
-<!-- default badges list -->
-![](https://img.shields.io/endpoint?url=https://codecentral.devexpress.com/api/v1/VersionRange/128602855/15.2.4%2B)
-[![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/E3359)
-[![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
-<!-- default badges end -->
-<!-- default file list -->
-*Files to look at*:
+# Reporting for WPF - Custom Editors for Report Parameters
+
+
+This example invokes a custom [ComboBoxEdit](https://docs.devexpress.com/WindowsForms/DevExpress.XtraEditors.ComboBoxEdit) editor for a multi-value report parameter.
+
+To implement a custom parameter editor, create a custom parameter template selector and assign it to the [ParameterTemplateSelector](https://docs.devexpress.com/WPF/DevExpress.Xpf.Printing.Parameters.ParametersPanel.ParameterTemplateSelector) property of the of the [DocumentPreviewControl](https://docs.devexpress.com/WPF/DevExpress.Xpf.Printing.DocumentPreviewControl)‘s [ParametersPanel](https://docs.devexpress.com/WPF/DevExpress.Xpf.Printing.Parameters.ParametersPanel). 
+
+The custom parameters template selector extends the base [ParameterTemplateSelector](https://docs.devexpress.com/WPF/DevExpress.Xpf.Printing.Parameters.ParameterTemplateSelector) class, and specifies a custom editor template for the multivalue parameter.
+
+![Screenshot](Images/screenshot.png)
+## Files to Review
 
 * [CustomParameterTemplateSelector.cs](./CS/CustomParameterEditorsWPF/CustomParameterTemplateSelector.cs) (VB: [CustomParameterTemplateSelector.vb](./VB/CustomParameterEditorsWPF/CustomParameterTemplateSelector.vb))
 * [MainWindow.xaml](./CS/CustomParameterEditorsWPF/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/CustomParameterEditorsWPF/MainWindow.xaml))
-<!-- default file list end -->
-# How to provide custom editors for report parameters in WPF
 
+## Documentation
 
-<p>This example demonstrates how you can provide custom editors for report parameters of arbitrary types. In particular, it shows how to utilize a custom <strong>ComboBoxEdit</strong> as an editor for a multi-value report parameter.</p>
-<p> To provide the described functionality, implement a custom parameter template selector and assign it to the <strong>ParameterTemplateSelector </strong>property of the <strong>DocumentPreviewControl</strong>'s <strong>ParametersPanel</strong>. In this example, the custom parameters template selector extends the base <strong>ParameterTemplateSelector</strong> class with the capability to provide a custom editor template for each parameter whose <strong>MultiValue</strong> property is set to <strong>true</strong>. The custom editor template is declared in XAML.</p>
-
-<br/>
-
+* [Custom Editors for Report Parameters](https://docs.devexpress.com/XtraReports/17763/wpf-reporting/wpf-reporting-document-preview/api-and-customization/provide-custom-editors-for-report-parameters)
 
