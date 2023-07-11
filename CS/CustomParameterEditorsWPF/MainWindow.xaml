@@ -2,7 +2,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
         xmlns:dxp="http://schemas.devexpress.com/winfx/2008/xaml/printing"  
-        xmlns:dxpp="clr-namespace:DevExpress.Xpf.Printing.Parameters;assembly=DevExpress.Xpf.Printing.v22.1"     
+        xmlns:dxpp="clr-namespace:DevExpress.Xpf.Printing.Parameters;assembly=DevExpress.Xpf.Printing.v23.1"     
         xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" 
         xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" 
         xmlns:local="clr-namespace:CustomParameterEditorsWPF"

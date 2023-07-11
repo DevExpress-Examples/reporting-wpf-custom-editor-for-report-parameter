@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Windows;
 using DevExpress.Xpf.Printing.Parameters;
 using DevExpress.XtraReports.Parameters.ViewModels;
