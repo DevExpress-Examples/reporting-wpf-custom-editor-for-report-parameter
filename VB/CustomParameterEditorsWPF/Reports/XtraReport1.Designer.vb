@@ -1,4 +1,4 @@
-﻿Namespace CustomParameterEditorsWPF.Reports
+Namespace CustomParameterEditorsWPF.Reports
 
     Partial Class XtraReport1
 
