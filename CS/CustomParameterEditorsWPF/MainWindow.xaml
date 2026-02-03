@@ -4,7 +4,7 @@
         Title="MainWindow" Height="614.823" Width="881.959"
         xmlns:mvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
         xmlns:dxp="http://schemas.devexpress.com/winfx/2008/xaml/printing"  
-        xmlns:dxpp="clr-namespace:DevExpress.Xpf.Printing.Parameters;assembly=DevExpress.Xpf.Printing.v14.2"     
+        xmlns:dxpp="clr-namespace:DevExpress.Xpf.Printing.Parameters;assembly=DevExpress.Xpf.Printing.v15.1"     
         xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" 
         xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" 
         xmlns:local="clr-namespace:CustomParameterEditorsWPF"
@@ -18,7 +18,7 @@
                         <dxe:ComboBoxEdit Grid.Column="1" IsTextEditable="False" InvalidValueBehavior="AllowLeaveEditor"
                                           ItemsSource="{Binding DataContext.Categories, RelativeSource={RelativeSource AncestorType=Window}}" EditValue="{Binding Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}">
                             <dxe:ComboBoxEdit.StyleSettings>
-                                <dxe:CheckedComboBoxStyleSettings/>
+                                <dxe:CheckedComboBoxStyleSettings />
                             </dxe:ComboBoxEdit.StyleSettings>
                         </dxe:ComboBoxEdit>
                     </dxpp:ParameterLineLayout>
